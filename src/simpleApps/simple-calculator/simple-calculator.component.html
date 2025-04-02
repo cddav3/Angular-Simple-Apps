@@ -1,0 +1,31 @@
+<div class="main">
+    <div class="calculatorBox">
+        <h1 style="color: rgb(0, 0, 100); font-style: italic; font-size: 50px;">Simple Calculator</h1>
+        <h2>Total number of operations:  <span class="result-box">{{operationNumber}}</span></h2>
+        <div class="operatorButtonContainer">
+            <button class="operatorButton" (click)="buttonClicked('+')">+</button>
+            <button class="operatorButton" (click)="buttonClicked('-')">-</button>
+            <span class="currentOperator">{{currentOperator()}}</span>
+            <button class="operatorButton" (click)="buttonClicked('/')">/</button>
+            <button class="operatorButton" (click)="buttonClicked('*')">*</button>
+        </div>
+        <div class="inputBoxContainer">
+            <div>
+            <label style="display: block; font-size: 18px;">Input the <span style="font-weight: 700; color: chartreuse;">first</span> number</label>
+            <input [(ngModel)]="firstInput" style="display: block; width: 100%;padding: 7px;background-color: black;color: aqua; font-size: 18px;">
+            </div>
+            <div>
+            <label style="display: block;font-size: 18px;">Input the <span style="font-weight: 700;color: chartreuse;">second</span> number</label>
+            <input [(ngModel)]="secondInput" style="display: block; width: 100%;padding: 7px;background-color: black;color: aqua;font-size: 18px;">
+            </div>
+        </div>
+        <div class="result-container">
+            <div class="clearButtonDiv">
+                <button class="clearButton" (click)="clearInputs()">CLEAR INPUTS</button>
+            </div>
+            <div class="resultSection">
+                <h2>Result is: {{ operationResult() }}</h2>
+            </div>
+        </div>
+    </div>
+</div>

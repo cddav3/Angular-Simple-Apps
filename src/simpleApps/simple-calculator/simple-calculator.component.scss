@@ -1,0 +1,85 @@
+.main{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: lightgreen;
+  color: white;
+  padding: 20px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.calculatorBox{
+    background-color: rgb(4, 106, 30);
+    padding: 20px;
+    width: 800px;
+    height: 700px;
+    text-align: center;
+}
+.result-box{
+    border: 2px solid white;
+    padding: 5px;
+    font-size: 40px;
+}
+
+.operatorButtonContainer{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  margin: 60px 0;
+}
+.currentOperator{
+  font-size: 30px;
+  border-radius: 50%;
+  color: aquamarine;
+  width: 50px;         /* Set the width to make the button round */
+  height: 50px;
+  background-color: black; 
+  text-align: center;
+  font-weight: 900;
+  padding: 10px;
+  align-content: center;
+}
+.inputBoxContainer{
+  display: flex;
+  // flex-direction: column;
+  justify-content: space-evenly;
+  text-align: left;
+}
+.operatorButton{
+    border-radius: 50%; /* This makes the button fully round */
+    padding: 12px 20px;  /* Adjust padding to control button size */
+    width: 50px;         /* Set the width to make the button round */
+    height: 50px;        /* Set the height equal to the width for a perfect circle */
+    border: none;        /* Remove the default border */
+    background-color: #087cca; /* Button background color */
+    color: white;        /* Text color */
+    font-size: 33px;      /* Font size */
+    text-align: center;   /* Center the text inside the button */
+    display: flex;        /* Flexbox layout */
+    justify-content: center;  /* Center horizontally */
+    align-items: center;
+    cursor: pointer;
+}
+.operatorButton:hover{
+    background-color: black;
+}
+.result-container{
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-evenly;
+  align-content: flex-start;
+}
+.clearButton{
+  padding: 15px;
+  background-color: brown;
+  font-size: 15px;
+  color: white;
+}
+
+.operatorButton:active {
+    background-color: #2980b9;  /* Change to a darker color when clicked */
+    transform: scale(0.95);      /* Slightly shrink the button for a "pressed" effect */
+  }
